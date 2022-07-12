@@ -1,6 +1,21 @@
 *.class
 *.log
 
+logs
+target
+.bloop
+.vscode
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+node_modules
+public/compiled
+npm-debug.log
+
+
 .bsp
 project/target
 target
