@@ -1,6 +1,6 @@
 name := """playApp"""
 version := "1.0-SNAPSHOT"
-scalaVersion := "2.13.4"
+scalaVersion := "2.12.10"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 pipelineStages := Seq(digest)
