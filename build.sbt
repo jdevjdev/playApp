@@ -1,15 +1,17 @@
 name := """playApp"""
+organization := "ai.economicdatasciences"
+
 version := "1.0-SNAPSHOT"
-scalaVersion := "2.12.10"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
-pipelineStages := Seq(digest)
 
-libraryDependencies ++= Seq(
-  jdbc,
-  caffeine,
-  ws,
-  guice
-)
+scalaVersion := "2.12.10"
 
-resolvers += "sonatype-snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
+libraryDependencies += guice
+libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
+
+// Adds additional packages into Twirl
+//TwirlKeys.templateImports += "ai.economicdatasciences.controllers._"
+
+// Adds additional packages into conf/routes
+// play.sbt.routes.RoutesKeys.routesImport += "ai.economicdatasciences.binders._"
